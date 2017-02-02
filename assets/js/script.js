@@ -25,7 +25,7 @@ jQuery( function( $ ) {
 		    url: url,
 		    method: method,
 		    beforeSend: function ( xhr ) {
-		        xhr.setRequestHeader( 'X-WP-Nonce', WP_API_Settings.nonce );
+		        xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
 		    },
 		    data: data,
 		    dataType: 'json',
