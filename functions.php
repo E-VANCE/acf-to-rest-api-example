@@ -12,7 +12,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );	
 
 	wp_enqueue_script( 'script', $assets_dir . 'js/script.js', array( 'jquery' ), false, true );
-	wp_localize_script( 'script', 'WP_API_Settings', array( 'root' => esc_url_raw( rest_url() ), 'nonce' => wp_create_nonce( 'wp_rest' ) ) );
+	wp_localize_script( 'script', 'wpApiSettings', array( 'root' => esc_url_raw( rest_url() ), 'nonce' => wp_create_nonce( 'wp_rest' ) ) );
 
 	wp_enqueue_script( 'bootstrap', $assets_dir . 'js/bootstrap.min.js', array( 'script' ), false, true );
 	wp_enqueue_script( 'bootstrap-datepicker', $assets_dir . 'js/bootstrap-datepicker.min.js', array( 'bootstrap' ), false, true );
